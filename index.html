@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Azleen Homepage</title>
+<link rel="icon" type="image/png" href="moonflix me.png">
+
+<style>
+body {
+background: url('texture purple.jpg') no-repeat center center fixed;
+background-size: cover;
+font-family: 'Georgia', serif;
+margin: 0;
+padding: 20px;
+color: white;
+}
+
+#datetime-simple {
+position: fixed;
+top: 15px;
+right: 20px;
+font-size: 18px;
+padding: 10px 20px;
+background: rgba(0, 0, 0, 0.4);
+border-radius: 50px;
+backdrop-filter: blur(5px);
+z-index: 1000;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+nav {
+flex: 1;
+min-width: 280px;
+background-color: rgba(200, 153, 232, 0.9);
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+color: #380a30;
+}
+
+nav a {
+display: block;
+text-decoration: none;
+color: #380a30;
+font-size: 22px;
+padding: 12px 0;
+transition: 0.3s;
+border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+nav a:hover {
+padding-left: 10px;
+color: #540b54;
+font-weight: bold;
+}
+
+section {
+flex: 3;
+min-width: 500px;
+background-color: rgba(56, 10, 48, 0.85);
+padding: 50px;
+border-radius: 15px;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+h1.main-title {
+font-family:Grow West;
+font-size: 80px;
+margin-bottom: 10px;
+text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.quote {
+font-style: italic;
+font-size: 20px;
+margin-bottom: 40px;
+opacity: 0.8;
+}
+
+.welcome-text {
+font-family: 'BFashion', sans-serif;
+font-size: 32px;
+line-height: 1.4;
+margin-bottom: 30px;
+}
+
+footer {
+width: 100%;
+margin-top: 20px;
+background-color: #540b54;
+padding: 20px;
+text-align: center;
+border-radius: 15px;
+font-size: 20px;
+}
+
+.social-icons { margin-top: 20px; }
+.social-icons img { transition: transform 0.3s; }
+.social-icons img:hover { transform: scale(1.1); }
+
+ @font-face { font-family: 'BFashion'; src: url('myfont/abangfashion-webfont.woff'); }
+@font-face { font-family: 'Grow West'; src: url('myfont/growwest-regular-webfont.woff'); }
+</style>
+</head>
+
+<body>
+
+<div id="datetime-simple"></div>
+
+<div class="container">
+<div style="width: 100%; text-align: center;">
+<h1 class="main-title">Welcome To My Az Homepage</h1>
+<p class="quote">~~To find yourself, you must first lose yourself in the endless sky~~</p>
+</div>
+
+<nav>
+<a href="Biodata.html">👤 Biodata</a>
+<a href="Experience Internship.html">💼 Experience</a>
+<a href="My Family.html">🏠 Family</a>
+<a href="Edu&Cer.html">🎓 Education</a>
+<a href="Gallery.html">🖼️ Gallery</a>
+        
+<div style="margin-top: 40px;">
+<p style="font-weight: bold;">Social Media</p>
+<div class="social-icons">
+<a href="https://facebook.com/..." target="_blank" style="display:inline; border:none;">
+<img src="icon facebook.PNG" width="45" height="45">
+</a>
+<a href="https://instagram.com/..." target="_blank" style="display:inline; border:none;">
+<img src="icon insta.PNG" width="45" height="45">
+</a>
+</div>
+<p style="font-size: 14px; margin-top: 10px;">Click to connect! 👇</p>
+</div>
+</nav>
+
+<section>
+<img src="moonflix me.png" width="100" style="margin-bottom: 20px;">
+<div class="welcome-text">
+Welcome to my personal resume.<br>
+Explore the tabs to learn about my journey!
+</div>
+        
+<div style="margin-top: 30px; font-size: 24px;">
+Contact Me:<br>
+<a href="https://wa.me/601172737322" target="_blank">
+<img src="W icon.png" width="60" style="margin-top: 15px;">
+</a>
+</div>
+</section>
+
+<footer>
+Copyright &copy; NURAZLEEN <img src="moonflix me.png" width="20">
+</footer>
+<br>
+</div>
+
+<script>
+function updateDateTime() {
+const now = new Date();
+document.getElementById("datetime-simple").innerText = 
+`📅 ${now.toLocaleDateString('en-GB')} | 🕑 ${now.toLocaleTimeString()}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>
