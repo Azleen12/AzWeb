@@ -1,0 +1,310 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Experience Internship</title>
+<link rel="icon" type="image/png" href="moonflix me.png">
+
+<style>
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background: url('cat.jpeg') no-repeat center center fixed;
+background-size: cover;
+font-family: 'Georgia', serif;
+color: white;
+margin: 0;
+padding: 0;
+}
+
+#datetime-simple {
+position: fixed;
+top: 15px;
+right: 20px;
+font-size: 25px;
+padding: 6px 12px;
+background: rgba(0,0,0,0.4);
+border-radius: 20px;
+font-family: 'BFashion', sans-serif;
+z-index: 1001;
+color: white;
+}
+
+.site-bar {
+background-color: #2a1943;
+color: white;
+padding: 15px;
+border-radius: 15px;
+width: 1326px;
+margin: 20px auto;
+text-align: center;
+}
+
+.container {
+width: 1326px;
+margin: 0 auto;
+display: flex;
+gap: 20px;
+}
+
+nav {
+flex: 1;
+background-color: rgba(200, 153, 232, 0.8);
+color: #2a1943;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+section {
+flex: 1;
+background-color: rgba(59, 27, 94, 0.85);
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+color: white;
+}
+
+h3 {
+font-family: Monospace;
+font-size: 28px;
+text-decoration: underline;
+margin-bottom: 10px;
+}
+
+ol { 
+font-family: optima; 
+font-size: 20px; 
+font-weight: bold; 
+line-height: 1.6; 
+}
+ul { 
+font-family: optima; 
+font-size: 20px; 
+font-weight: bold; 
+line-height: 1.6; 
+list-style-type: square; 
+}
+li { 
+margin-bottom: 15px; 
+}
+
+.flip-box {
+background-color: transparent;
+perspective: 1000px;
+display: inline-block;
+margin-bottom: 15px;
+margin-right: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.flip-box-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner { 
+transform: rotateY(180deg); 
+}
+.flip-box-front, .flip-box-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 5px solid #916ecf;
+border-radius: 5px;
+}
+.flip-box-front { 
+background-color: #3b1b5e; 
+}
+.flip-box-front img { 
+width: 100%; height: 100%; 
+object-fit: cover; 
+}
+.flip-box-back {
+background-color: #c899e8;
+color: #2a1943;
+transform: rotateY(180deg);
+padding: 10px;
+font-family: 'Karina', sans-serif;
+font-size: 16px;
+}
+
+.nav-buttons { 
+text-align: center; 
+margin: 40px 0; 
+}
+.testbtn {
+background-color: #c899e8;
+padding: 15px 25px;
+border: none;
+border-radius: 10px;
+margin: 5px;
+cursor: pointer;
+font-family: Georgia;
+font-size: 18px;
+}
+.testbtn a { 
+text-decoration: none; 
+color: black; 
+}
+
+@font-face { 
+font-family: 'Grow West'; 
+src: url('myfont/growwest-regular-webfont.woff'); 
+}
+@font-face { 
+font-family: 'BFashion'; 
+src: url('myfont/abangfashion-webfont.woff'); 
+}
+@font-face { 
+font-family: 'Karina'; 
+src: url('myfont/karina-webfont.woff'); 
+}
+
+#backToTop {
+position: fixed;
+bottom: 30px;
+right: 30px;
+background: #c899e8;
+color: black;
+padding: 15px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+z-index: 1000;
+}
+</style>
+</head>
+
+<body>
+
+<div id="datetime-simple"></div>
+
+<br>
+<h1 style="text-align:center; color:white; font-size:70px; text-decoration:underline; font-family:'Grow West';">
+    My Experience in Internship <img src="moonflix me.png" width="50">
+</h1>
+
+<header class="site-bar">
+    <h2 style="font-size:25px; margin:0; font-family:Geneva;"><i>~~Let's explore together! 😊😊~~</i></h2>
+</header>
+
+<div class="container">
+    <nav>
+        <h3>Company Name:</h3>
+        <p style="font-size:24px; font-weight:bold;">Lksoft Solutions</p>
+
+        <h3>Address:</h3>
+        <p style="font-size:20px; font-weight:bold;">37, Jalan Ros Merah 2/7, Taman Johor Jaya, 81100 Johor Bahru, Johor, Malaysia</p>
+
+        <h3>My Tasks:</h3>
+        <ol>
+            <li>Responsible in checking EzyRetail POS system (new system application in the company) to work properly</li>
+            <li>Make a video or tutorial on the guide how to use EzyRetail POS based on each function have in the app</li>
+            <li>Check some of new devices arrive to make sure it working perfectly</li>
+            <li>Check all new update including new method that have been update in the system</li>
+            <li>Check for errors in system and the database of the website Ezy Order (Cloud Backend)</li>
+            <li>Understand how to use EzyLink Tools and SQL Autocount</li>
+            <li>Verify details on receipts after using EzyRetail POS</li>
+        </ol>
+
+        <h3>Skills I Gained:</h3>
+        <ul>
+            <li>Executing test cases to ensure new features work as designed</li>
+            <li>Using structured methods to document and report software bugs</li>
+            <li>Verifying operational integrity of complex POS systems</li>
+            <li>Creating and editing professional video tutorials for software</li>
+        </ul>
+    </nav>
+
+    <section>
+        <h3 style="color:white;">♥ Logo:</h3>
+        <img src="Lksoft logo.jpg" border="5" width="200" height="200" style="border-color:#916ecf; border-radius:10px; margin-bottom:20px;">
+
+        <h3 style="color:white;">♥ Some of the video I made:</h3>
+
+        <div class="flip-box" style="width: 140px; height: 220px;">
+            <div class="flip-box-inner">
+                <div class="flip-box-front"><img src="EzyPOS.jpg"></div>
+                <div class="flip-box-back"><p>Simplify version of the EzyRetail POS Function</p></div>
+            </div>
+        </div>
+
+        <div class="flip-box" style="width: 140px; height: 220px;">
+            <div class="flip-box-inner">
+                <div class="flip-box-front"><img src="SQL.jpg"></div>
+                <div class="flip-box-back"><p>Sales POS Sync with SQL Accounting</p></div>
+            </div>
+        </div>
+
+        <div class="flip-box" style="width: 140px; height: 220px;">
+            <div class="flip-box-inner">
+                <div class="flip-box-front"><img src="EzyLink Tool.jpg"></div>
+                <div class="flip-box-back"><p>Sales POS Sync with Autocount</p></div>
+            </div>
+        </div>
+
+        <div class="flip-box" style="width: 140px; height: 220px;">
+            <div class="flip-box-inner">
+                <div class="flip-box-front"><img src="Setting1.jpg"></div>
+                <div class="flip-box-back"><p>Weight Scale & Hardware Settings</p></div>
+            </div>
+        </div>
+
+        <div class="flip-box" style="width: 140px; height: 220px;">
+            <div class="flip-box-inner">
+                <div class="flip-box-front"><img src="Setting2.jpg"></div>
+                <div class="flip-box-back"><p>System & Server Settings</p></div>
+            </div>
+        </div>
+
+        <div class="flip-box" style="width: 290px; height: 160px;">
+            <div class="flip-box-inner">
+                <div class="flip-box-front"><img src="Tutorial Ezy.png"></div>
+                <div class="flip-box-back"><p>Overview of EzyRetail POS</p></div>
+            </div>
+        </div>
+
+        <h3 style="color:white; margin-top:30px;">♥ Official Website:</h3>
+        <a href="https://www.youtube.com/@EzySolutions_Malaysia/featured" target="_blank">
+            <img src="Ezy.jpg" border="3" width="100%" style="border-color:#916ecf; border-radius:5px;">
+        </a>
+        <p style="text-align:center; font-weight:bold; font-size:20px; margin-top:10px;">Click me !!! ☝</p>
+    </section>
+</div>
+
+<footer class="site-bar" style="font-size:25px; margin-top:40px;">
+    Copyright &copy; NURAZLEEN <img src="moonflix me.png" width="30">
+</footer>
+
+<div class="nav-buttons">
+    <button class="testbtn"><a href="index.html">Home</a></button>
+    <button class="testbtn"><a href="Biodata.html">Biodata</a></button>
+    <button class="testbtn"><a href="My Family.html">Family</a></button>
+    <button class="testbtn"><a href="Edu&Cer.html">Edu&Cer</a></button>
+    <button class="testbtn"><a href="Gallery.html">Gallery</a></button>
+</div>
+
+<a href="#" id="backToTop">↑ Back to Top</a>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        document.getElementById("datetime-simple").innerText = 
+            `📅 ${now.toLocaleDateString('en-GB')} | 🕑 ${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'})}`;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,354 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+<link rel="icon" type="image/png" href="moonflix me.png">
+
+<style>
+* { 
+box-sizing: border-box; 
+}
+body {
+background: url('Columbina.jpg') no-repeat center center fixed;
+background-size: cover;
+font-family: 'Georgia', serif;
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+}
+#datetime-simple {
+position: fixed;
+top: 15px;
+right: 20px;
+font-size: 25px;
+padding: 6px 12px;
+background: rgba(0,0,0,0.4);
+border-radius: 20px;
+font-family: BFashion;
+z-index: 1001;
+color: white;
+}
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+}
+header, footer {
+background-color: #102c46;
+color: white;
+text-align: center;
+border-radius: 15px;
+display: flex; 
+align-items: center;
+justify-content: center;
+}
+header { 
+height: 60px; 
+margin: 20px 0; 
+}
+footer { 
+height: 70px;
+margin: 20px 0; 
+font-size: 25px; 
+}
+
+.audio-control-box { 
+text-align: center; 
+margin: 20px 0; 
+}
+#musicBtn {
+background-color: #a4badc;
+color: black;
+border: 3px solid #102c46;
+padding: 12px 30px;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+border-radius: 10px;
+transition: 0.3s;
+}
+#musicBtn:hover { 
+background-color: white; 
+transform: scale(1.05); 
+}
+
+section {
+background-color: rgba(164, 186, 220, 0.9);
+padding: 30px; 
+margin: 30px auto; 
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+text-align: center;
+}
+.category-title {
+font-family:Arsenicatrial;
+font-size: 40px;
+font-weight: bold;
+display: block;
+margin-bottom: 25px;
+border-bottom: 3px solid #102c46;
+padding-bottom: 10px;
+color: #102c46;
+text-align: left;
+}
+.gallery-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+}
+.gallery-img {
+width: 200px;
+height: 150px;
+object-fit: cover;
+border: 4px solid #103a66;
+border-radius: 10px;
+cursor: zoom-in;
+transition: 0.3s;
+}
+.gallery-img:hover {
+transform: scale(1.08);
+box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.zoom-overlay {
+    display: none;
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+.zoom-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+.nav-btns { 
+text-align: center; 
+margin: 40px 0; 
+}
+.testbtn {
+    background-color: #a4badc;
+    color: black;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    font-family: Georgia;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.testbtn:hover {
+background-color: white; 
+transform: translateY(-3px); 
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #102c46;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+@font-face { 
+font-family: 'Grow West'; 
+src: url('myfont/growwest-regular-webfont.woff'); 
+}
+@font-face { 
+font-family: 'Arsenicatrial'; 
+src: url('myfont/arsenicatrial-regular-webfont.woff'); 
+}
+@font-face { 
+font-family: 'BFashion'; 
+src: url('myfont/abangfashion-webfont.woff'); 
+}
+</style>
+</head>
+<body>
+
+<div id="datetime-simple"></div>
+
+<div class="zoom-overlay" id="overlay" onclick="closeImage()">
+    <img id="zoomedImg" src="">
+</div>
+
+<h1 style="text-align:center; color:white; font-size:70px; text-decoration:underline; font-family:'Grow West'; margin-top:30px;">
+    My Gallery <img src="moonflix me.png" width="50">
+</h1>
+
+<div class="audio-control-box">
+    <audio id="myAudio" loop><source src="Haram.mp3" type="audio/mpeg"></audio>
+    <button id="musicBtn" onclick="toggleMusic()">🎵 Play Music</button>
+</div>
+
+<div class="container">
+    <header>
+        <h2 style="font-size:22px; color:white; font-family:Geneva;">
+            <marquee scrollamount="6"><i>~~ Don't mind my gallery 😋😋😋 ~~</i></marquee>
+        </h2>
+    </header>
+
+    <section>
+        <span class="category-title">Internship :</span>
+        <div class="gallery-grid">
+            <img src="Intern1.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern2.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern3.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern4.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern5.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern6.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern7.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern8.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Intern9.jpg" class="gallery-img" onclick="zoomImage(this)">
+        </div>
+    </section>
+
+    <section>
+        <span class="category-title">Program :</span>
+        <div class="gallery-grid">
+            <img src="Program.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Program1.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="IMD1.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="IMD317.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Resting.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <video controls style="width:200px; height:150px; border-radius:10px; border: 4px solid #103a66;">
+                <source src="Video Program.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section>
+        <span class="category-title">Cats :</span>
+        <div class="gallery-grid">
+            <img src="Alid.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Putih.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Gebu.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="P&G.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Dalid premium.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="DalidM.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="DalidJeans.jpg" class="gallery-img" onclick="zoomImage(this)">
+        </div>
+    </section>
+
+    <section>
+        <span class="category-title">Comic Panel (Manhwa) :</span>
+        <div class="gallery-grid">
+            <img src="Manhwa.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Manhwa1.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="God1.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="God2.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="God3.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Penelope.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Penelope1.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Penelope3.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Penelope4.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Calisto.jpg" class="gallery-img" onclick="zoomImage(this)">
+        </div>
+    </section>
+
+    <section>
+        <span class="category-title">From Games :</span>
+        <div class="gallery-grid">
+            <img src="Genshin.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Skirk.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Wanderer.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Honkai.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="anaxa.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="boothill.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Commandant.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="PGRLobby.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="PGR.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="FRover.jpeg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="LunaWUWA.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Augusta.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Rafayel.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Sylus.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Lads.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="mc1.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="mc2.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="mc3.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="mc4.png" class="gallery-img" onclick="zoomImage(this)">
+        </div>
+    </section>
+
+    <section>
+        <span class="category-title">Crochet & Random :</span>
+        <div class="gallery-grid">
+            <img src="Crochet1.webp" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Cat Crochet.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Crochet2.webp" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Art1.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Art2.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Art3.png" class="gallery-img" onclick="zoomImage(this)">
+            <img src="Random.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="OldMe.jpg" class="gallery-img" onclick="zoomImage(this)">
+            <img src="OldMe2.jpg" class="gallery-img" onclick="zoomImage(this)">
+        </div>
+    </section>
+
+    <footer>
+        Copyright &copy; NURAZLEEN <img src="moonflix me.png" width="30">
+    </footer>
+
+    <div class="nav-btns">
+        <a href="index.html" class="testbtn">Home</a>
+        <a href="Biodata.html" class="testbtn">Biodata</a>
+        <a href="Experience Internship.html" class="testbtn">Experience</a>
+        <a href="My Family.html" class="testbtn">Family</a>
+        <a href="Edu&Cer.html" class="testbtn">Edu&Cer</a>
+    </div>
+</div>
+
+<a href="#" id="backToTop">↑ Top</a>
+
+<script>
+function toggleMusic() {
+    var audio = document.getElementById("myAudio");
+    var btn = document.getElementById("musicBtn");
+    if (audio.paused) {
+        audio.play();
+        btn.innerHTML = "⏹️ Stop Music";
+    } else {
+        audio.pause();
+        btn.innerHTML = "🎵 Play Music";
+    }
+}
+
+function zoomImage(img) {
+    var overlay = document.getElementById("overlay");
+    var zoomedImg = document.getElementById("zoomedImg");
+    overlay.style.display = "flex";
+    zoomedImg.src = img.src;
+}
+
+function closeImage() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+function updateDateTime() {
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+    const timeStr = now.toLocaleTimeString('en-GB', { hour12:false });
+    document.getElementById("datetime-simple").innerText = `📅 ${dateStr} | 🕑 ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>
