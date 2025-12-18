@@ -1,0 +1,324 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Biodata</title>
+<link rel="icon" type="image/png" href="moonflix me.png">
+
+<style>
+* { 
+box-sizing: border-box; 
+}
+body {
+background: url('texture purple.jpg') no-repeat center center fixed;
+background-size: cover;
+font-family: 'Georgia', serif;
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+}
+#datetime-simple {
+position: fixed;
+top: 15px;
+right: 20px;
+font-size: 25px;
+padding: 6px 12px;
+background: rgba(0,0,0,0.4);
+border-radius: 20px;
+font-family: BFashion;
+z-index: 1001;
+color: white;
+}
+.site-bar {
+background-color: #540b54;
+color: white;
+padding: 10px;
+border-radius: 15px;
+width: 100%;
+max-width: 1100px;
+margin: 10px auto;
+text-align: center;
+}
+.main-content {
+width: 85%;
+max-width: 1100px;
+margin: 0 auto;
+}
+.content-box {
+background-color: #c899e8cc; 
+color: black;
+margin: 15px 0;
+padding: 30px;
+border-radius: 20px;
+display: flex;
+align-items: center;
+gap: 30px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.content-box.reverse { 
+flex-direction: row-reverse; 
+}
+.info-text { 
+flex: 2; 
+font-size: 22px; 
+line-height: 1.6;
+text-align: justify; 
+}
+.info-media { 
+flex: 1; 
+text-align: center; 
+}
+.profile-img {
+border: 6px solid #540b54;
+border-radius: 50%;
+width: 250px;
+height: 250px;
+object-fit: cover;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+}
+.profile-img:hover {
+transform: scale(1.05);
+box-shadow: 0 0 20px #540b54;
+}
+.address-img {
+width: 250px;
+border-radius: 15px;
+box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+transition: transform 0.3s ease;
+}
+.address-img:hover {
+transform: scale(1.05);
+}
+.video-gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+margin-top: 20px;
+}
+.video-item {
+background-color: #dfb3fc;
+padding: 15px;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+width: 45%; 
+min-width: 280px;
+}
+.video-caption {
+color: black;
+font-family: Georgia;
+font-size: 16px;
+margin-top: 10px;
+font-weight: bold;
+}
+.music-space {
+margin-top: 40px;
+padding-top: 20px;
+border-top: 2px dashed #540b54;
+}
+.sticker-left, .sticker-right {
+position: fixed;
+width: 150px;
+z-index: 999;
+animation: float 4s ease-in-out infinite;
+}
+.sticker-left { 
+left: 20px; 
+top: 200px; 
+}
+.sticker-right { 
+right: 20px; 
+top: 200px; 
+animation-delay: 1s; 
+}
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+.nav-container { 
+text-align: center; 
+margin: 20px 0; 
+}
+.testbtn {
+background-color: #c899e8;
+color: black;
+padding: 12px 20px;
+border: none;
+border-radius: 10px;
+margin: 5px;
+font-family: Georgia;
+font-size: 18px;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+font-weight: bold;
+}
+#backToTop {
+position: fixed;
+bottom: 30px;
+right: 30px;
+background: #540b54;
+color: white;
+padding: 12px 18px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+z-index: 1000;
+}
+@font-face { 
+font-family: 'Grow West'; 
+src: url('myfont/growwest-regular-webfont.woff'); 
+}
+@font-face { 
+font-family: 'BFashion'; 
+src: url('myfont/abangfashion-webfont.woff'); 
+}
+</style>
+</head>
+
+<body>
+
+<div id="datetime-simple"></div>
+
+<img src="Winter.jpeg" class="sticker-left" alt="Winter">
+<img src="Winter.jpeg" class="sticker-right" alt="Winter">
+
+<h1 style="text-align:center; font-size:70px; font-family:'Grow West'; text-decoration:underline; color:white; margin: 15px 0;">
+My Biodata <img src="moonflix me.png" width="50">
+</h1>
+
+<div class="main-content">
+    
+<header class="site-bar">
+<h2 style="font-size:22px; margin:0; font-family:Geneva;">
+<marquee scrollamount="6">Let's get to know who I am!</marquee>
+</h2>
+</header>
+
+<div class="content-box">
+<div class="info-media">
+<img src="me.jpg" class="profile-img">
+</div>
+
+<div class="info-text">
+<h2 style="text-decoration: underline; margin-top:0;">Hello, It's Me!</h2>
+<ol>
+<li><b>Name:</b>Nurazleen Binti Ramli<br></li>
+<li><b>Birthday:</b>01 October 2005<br></li>
+<li><b>Gender:</b>Female<br></li>
+<li><b>Nationality:</b>Malaysia<br></li>
+<li><b>Languages:</b>Malay, English</li>
+</ol>
+<p style="font-style: italic; font-size: 18px; margin-top: 15px;">
+I'm a very introvert person, simple and humble. Only very talkative with the person I trust. I also have slightly trust issue but know a little to read people surround me.
+</p>
+</div>
+</div>
+
+<div class="content-box reverse">
+<div class="info-media">
+<a href="https://www.google.com/maps/place/Jalan+Maluri+Jaya,+81800+Ulu+Tiram,+Johor+Darul+Ta'zim/@1.585637,103.8207958,17z/data=!3m1!4b1!4m6!3m5!1s0x31da692b663bbf21:0xbf021fb2326e54e3!8m2!3d1.585637!4d103.8233707!16s%2Fg%2F1hc93563n?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+<img src="blok b.png" alt="Blok B" class="address-img"></a>
+</div>
+<div class="info-text">
+<h2 style="text-decoration: underline; margin-top:0; ">Contact & Address</h2>
+<b>Address:</b><br>
+I live in flat aparment with my family with nice people and beautiful environemental.It located at B-03-02, Jalan Maluri Jaya, Taman Maluri, 81800, Ulu Tiram, Johor. A small town hidden from other part of Johor. Most people doesnt recognize these place but they sure will know about an incident of police get shot from mysterious person at the town and its close with Bandar Sungai Tiram also usually a passage to Kota Tinggi.
+<br><br>
+
+<b>My Email:</b> aelynramli89@gmail.com
+</div>
+</div>
+
+<div class="content-box">
+    <div class="info-text">
+        <h2 style="text-decoration: underline; margin-top:0;">Hobbies & Interests</h2>
+        <ul>
+            <li>Drawing & Digital Art</li>
+            <li>Playing Video Games</li>
+            <li>Reading Novels</li>
+            <li>Watching Anime / Movies</li>
+        </ul>
+    </div>
+
+    <div class="info-media">
+        <p style="font-weight:bold;">Example of art:</p>
+        <img src="Art2.png" width="200" height="200" style="border: 5px solid black; border-radius: 7px;">
+    </div>
+</div>
+
+<div class="content-box" style="display: block; text-align: center;">
+<h2 style="text-decoration: underline; margin-top:0;">Video & Media Gallery</h2>
+
+<div class="video-gallery">
+    <div class="video-item">
+        <video controls style="width:100%; height:160px;">
+        <source src="Cutscene1.mp4" type="video/mp4"></video>
+        <div class="video-caption">Cutscene from Genshin Impact</div>
+    </div>
+
+    <div class="video-item">
+        <video controls style="width:100%; height:160px;">
+        <source src="Cutscene2.mp4" type="video/mp4"></video>
+        <div class="video-caption">Cutscene from Honkai Star Rail</div>
+    </div>
+
+    <div class="video-item">
+        <video controls style="width:100%; height:160px;">
+        <source src="Cutscene3.mp4" type="video/mp4"></video>
+        <div class="video-caption">Cinematic short from Wuthering Waves</div>
+    </div>
+
+    <div class="video-item">
+        <video controls style="width:100%; height:160px;">
+        <source src="Cutscene4.mp4" type="video/mp4"></video>
+        <div class="video-caption">Lucia EP."DAMIDAMI" from Zenless Zen Zero</div>
+    </div>
+</div>
+
+<div class="music-space">
+    <h2 style="text-decoration: underline;">My Playlist</h2>
+    <p>Music I Like:</p>
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1w0wtrHOjUeckYNYwsOTKj?utm_source=generator&theme=0" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1RlJbHQTz5euaILaz7GPz2?utm_source=generator&theme=0" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4km0RUkMMFdx8iDuq36o2w?utm_source=generator&theme=0" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2VyaGJJI8dOiv36F8vHZIL?utm_source=generator&theme=0" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3htoQPC7v5x04gWCQz1y2S?utm_source=generator&theme=0" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+</div>
+</div>
+
+<footer class="site-bar" style="font-size: 22px;">
+Copyright © NURAZLEEN <img src="moonflix me.png" width="30">
+</footer>
+
+<div class="nav-container">
+    <a href="index.html" class="testbtn">Home</a>
+    <a href="Experience Internship.html" class="testbtn">Experience</a>
+    <a href="My Family.html" class="testbtn">Family</a>
+    <a href="Edu&Cer.html" class="testbtn">Edu&Cer</a>
+    <a href="Gallery.html" class="testbtn">Gallery</a>
+</div>
+
+<a href="#" id="backToTop">↑ Back to Top</a>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const options = { day: 'numeric', month: 'short', year: 'numeric' };
+        const dateStr = now.toLocaleDateString('en-GB', options);
+        const timeStr = now.toLocaleTimeString('en-GB', { hour12: false });
+        document.getElementById("datetime-simple").innerText = `📅 ${dateStr} | 🕑 ${timeStr}`;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+</script>
+
+</body>
+</html>
+
