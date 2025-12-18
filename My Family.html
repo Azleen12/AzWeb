@@ -1,0 +1,318 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Family</title>
+<link rel="icon" type="image/png" href="moonflix me.png">
+
+<style>
+* { 
+box-sizing: border-box; 
+}
+body {
+background: url('mountain.jpeg') no-repeat center center fixed;
+background-size: cover;
+font-family: 'Georgia', serif;
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+}
+
+#datetime-simple {
+position: fixed;
+top: 15px;
+right: 20px;
+font-size: 25px;
+padding: 6px 12px;
+background: rgba(0,0,0,0.4);
+border-radius: 20px;
+font-family: BFashion;
+z-index: 1001;
+color: white;
+}
+.main-wrapper {
+width: 90%;
+max-width: 1100px;
+margin: 20px auto;
+}
+header.site-bar {
+background-color: rgba(19, 43, 83, 0.85);
+color: white;
+padding: 15px;
+border-radius: 15px;
+text-align: center;
+margin-bottom: 20px;
+}
+.audio-control-box {
+text-align: center;
+margin-bottom: 20px;
+}
+#musicBtn {
+background-color: #a5b4e8;
+color: black;
+border: 3px solid #132b53;
+padding: 10px 25px;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+border-radius: 8px;
+transition: 0.3s;
+}
+#musicBtn:hover {
+background-color: white;
+transform: scale(1.05);
+}
+.flex-container {
+display: flex;
+gap: 20px;
+margin-bottom: 20px;
+}
+nav, aside {
+padding: 25px;
+border-radius: 20px;
+box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+nav { 
+flex: 1.2; 
+background-color: rgba(44, 90, 144, 0.8); 
+color: white;
+font-family: 'BFashion', sans-serif;
+font-size: 22px; 
+line-height: 1.5;
+}
+aside { 
+flex: 1; 
+background-color: rgba(165, 180, 232, 0.85); 
+color: #132b53; 
+text-align: center;
+}
+nav h2 {
+font-size: 32px;
+text-decoration: underline;
+margin-top: 0;
+}
+nav hr {
+border: 0;
+height: 1px;
+background: rgba(255,255,255,0.3);
+margin: 15px 0;
+}
+.family-img {
+border: 4px solid white;
+border-radius: 10px;
+transition: all 0.3s ease;
+cursor: zoom-in;
+margin: 5px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.family-img:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+border-color: #132b53;
+}
+.zoom-overlay {
+display: none;
+position: fixed;
+top:0; left:0; width:100%; height:100%;
+background: rgba(0,0,0,0.9);
+z-index: 2000;
+justify-content: center;
+align-items: center;
+}
+.zoom-overlay img {
+max-width: 90%;
+max-height: 90%;
+border: 5px solid white;
+border-radius: 10px;
+}
+.sticker-left, .sticker-right {
+position: fixed;
+width: 150px;
+z-index: 999;
+animation: float 4s ease-in-out infinite;
+border: 2px solid white;
+border-radius: 10px;
+}
+.sticker-left { 
+left: 20px;
+top: 200px; 
+}
+.sticker-right { 
+right: 20px; 
+top: 200px; 
+animation-delay: 1s; 
+}
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+section.bottom-gallery {
+background-color: rgba(78, 133, 173, 0.8);
+padding: 30px;
+border-radius: 20px;
+text-align: center;
+margin-bottom: 20px;
+}
+footer {
+background-color: #132b53;
+color: white;
+text-align: center;
+padding: 20px;
+border-radius: 15px;
+font-size: 25px;
+}
+.nav-btns { 
+text-align: center; 
+margin: 30px 0; 
+}
+.testbtn {
+    background-color: #a5b4e8;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    font-family: Georgia;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #132b53;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+@font-face { font-family: 'Grow West'; src: url('myfont/growwest-regular-webfont.woff'); }
+@font-face { font-family: 'BFashion'; src: url('myfont/abangfashion-webfont.woff'); }
+</style>
+</head>
+<body>
+
+<div id="datetime-simple"></div>
+
+<div class="zoom-overlay" id="overlay" onclick="closeImage()">
+    <img id="zoomedImg" src="">
+</div>
+
+<img src="Dream1.jpeg" class="sticker-left" alt="Sticker">
+<img src="Dream1.jpeg" class="sticker-right" alt="Sticker">
+
+<div class="main-wrapper">
+    <h1 style="text-align:center; color:white; font-size:70px; text-decoration:underline; font-family:'Grow West';">
+        My Family <img src="moonflix me.png" width="50">
+    </h1>
+
+    <div class="audio-control-box">
+        <audio id="myAudio" loop><source src="Dirghayu.mp3" type="audio/mpeg"></audio>
+        <button id="musicBtn" onclick="toggleMusic()">🎵 Play Music</button>
+    </div>
+
+    <header class="site-bar">
+        <h2 style="font-size:22px; margin:0; font-family:Geneva;">
+            <marquee scrollamount="6">~~ Let's get to know my family! 😜😜 ~~</marquee>
+        </h2>
+    </header>
+
+    <div class="flex-container">
+        <nav>
+            <h2>Meet My Family!</h2>
+            
+            <p>&#129525; Mother : Jamilah Binti Mohtar<br>
+            Age : 54 Years | Birthday : 28 October 1971</p>
+            <hr>
+            
+            <p>&#128293; Father : Ramli Bin Abdullah<br>
+            Age : 66 Years | Birthday : 21 July 1959</p>
+            <hr>
+
+            <p>&#128161; 1st Brother : Razmie Bin Ramli<br>
+            Age : 33 Years | Birthday : 15 September 1992</p>
+            <hr>
+
+            <p>&#128165; 2nd Brother : Razman Bin Ramli<br>
+            Age : 31 Years | Birthday : 5 December 1994</p>
+        </nav>
+
+        <aside>
+            <p><b>Mom and Dad:</b></p>
+            <img src="mak ayah.jpg" class="family-img" width="120" height="150" onclick="zoomImage(this)">
+            <img src="Langkawi.jpg" class="family-img" width="150" height="150" onclick="zoomImage(this)">
+            
+            <p><b>1st & 2nd Brother:</b></p>
+            <img src="Balong.jpg" class="family-img" width="100" height="130" onclick="zoomImage(this)">
+            <img src="Bangah ausie.png" class="family-img" width="120" height="130" onclick="zoomImage(this)">
+            <img src="Bangah balong.jpg" class="family-img" width="120" height="130" onclick="zoomImage(this)">
+            
+            <p><b>Me:</b></p>
+            <img src="Alin.png" class="family-img" width="130" height="130" onclick="zoomImage(this)">
+            <img src="myself.png" class="family-img" width="130" height="130" onclick="zoomImage(this)">
+        </aside>
+    </div>
+
+    <section class="bottom-gallery">
+        <h2 style="color:white; font-family:Cambria; font-size:28px;">My Family & Cat:</h2>
+        <img src="Upset me.jpg" class="family-img" width="180" height="180" onclick="zoomImage(this)">
+        <img src="Family Trip.jpg" class="family-img" width="200" height="180" onclick="zoomImage(this)">
+        <img src="Event.jpg" class="family-img" width="310" height="180" onclick="zoomImage(this)">
+        <img src="dalid.jpg" class="family-img" width="250" height="180" onclick="zoomImage(this)">
+    </section>
+
+    <footer>
+        Copyright &copy; NURAZLEEN <img src="moonflix me.png" width="30">
+    </footer>
+
+    <div class="nav-btns">
+        <a href="index.html" class="testbtn">Home</a>
+        <a href="Biodata.html" class="testbtn">Biodata</a>
+        <a href="Experience Internship.html" class="testbtn">Experience</a>
+        <a href="Edu&Cer.html" class="testbtn">Edu&Cer</a>
+        <a href="Gallery.html" class="testbtn">Gallery</a>
+    </div>
+</div>
+
+<a href="#" id="backToTop">↑ Top</a>
+
+<script>
+function toggleMusic() {
+    var audio = document.getElementById("myAudio");
+    var btn = document.getElementById("musicBtn");
+    if (audio.paused) {
+        audio.play();
+        btn.innerHTML = "⏹️ Stop Music";
+    } else {
+        audio.pause();
+        btn.innerHTML = "🎵 Play Music";
+    }
+}
+
+function zoomImage(img) {
+    var overlay = document.getElementById("overlay");
+    var zoomedImg = document.getElementById("zoomedImg");
+    overlay.style.display = "flex";
+    zoomedImg.src = img.src;
+}
+
+function closeImage() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+function updateDateTime() {
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+    const timeStr = now.toLocaleTimeString('en-GB', { hour12:false });
+    document.getElementById("datetime-simple").innerText = `📅 ${dateStr} | 🕑 ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>
