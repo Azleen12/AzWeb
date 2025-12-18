@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edu & Cer</title>
+<link rel="icon" type="image/png" href="moonflix me.png">
+<style>
+* { box-sizing: border-box; }
+body {
+    background: url('Time.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+#datetime-simple {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    padding: 6px 12px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    font-family: BFashion;
+    z-index: 1001;
+    color: white;
+}
+.main-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+header.site-bar {
+    background-color: #102c46;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+nav {
+    background-color: #87b1d2; 
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+section {
+    background-color: #165d99; 
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Education List Styling */
+dt {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+dt:hover {
+    transform: translateX(15px);
+    color: #fff;
+}
+dt a {
+    text-decoration: none;
+    color: #102c46;
+}
+
+/* Flip Box Styling */
+.flip-box {
+    background-color: transparent;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 12px;
+    border-radius: 10px;
+    vertical-align: top;
+}
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+.flip-box:hover {
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    border: 5px solid #0b054b; 
+    border-radius: 10px;
+}
+.flip-box-front { background-color: #165d99; }
+.flip-box-front img { width: 100%; height: 100%; object-fit: cover; }
+.flip-box-back {
+    background-color: #87b1d2;
+    color: #165d99;
+    transform: rotateY(180deg);
+    padding: 15px;
+    font-family: 'Karina', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.flip-box-back a { text-decoration: none; color: inherit; }
+
+footer {
+    background-color: #102c46;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.nav-btns { text-align: center; padding-bottom: 40px; }
+.testbtn {
+    background-color: #a5b4e8;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    font-family: Georgia;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.testbtn:hover { background-color: white; transform: scale(1.1); }
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #102c46;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Custom Fonts */
+@font-face { font-family: 'Grow West'; src: url('myfont/growwest-regular-webfont.woff'); }
+@font-face { font-family: 'Karina'; src: url('myfont/karina-webfont.woff'); }
+@font-face { font-family: 'Ginger'; src: url('myfont/gingerbrand-webfont.woff'); }
+@font-face { font-family: 'BFashion'; src: url('myfont/abangfashion-webfont.woff'); }
+</style>
+</head>
+<body>
+
+<div id="datetime-simple"></div>
+
+<div class="main-wrapper">
+    <h1 style="text-align:center; color:white; font-size:70px; text-decoration:underline; font-family:'Grow West';">
+        Education & Certificate <img src="moonflix me.png" width="50">
+    </h1>
+
+    <header class="site-bar">
+        <h2 style="font-size:20px; margin:0; font-family:Geneva;">
+            <marquee scrollamount="5"><i>~~ Curious??? Then let's explore my life!!! 😎😎😎 ~~</i></marquee>
+        </h2>
+    </header>
+
+    <nav>
+        <h2 style="font-family:Serif; font-size:35px; margin-top:0;">My Education:</h2>
+        <dl style="font-family:'Ginger'; font-size:25px;">
+            <dt><a href="https://www.google.com/maps/place/TABIKA+KEMAS+BANDAR+TIRAM/@1.5986089,103.8257838,20.25z/data=!4m14!1m7!3m6!1s0x31da68ce6bb96009:0xb16eb51845513ff9!2s13+1,+2,+Jalan+Sungai+Tiram,+Sungai+Tiram,+81800+Ulu+Tiram,+Johor+Darul+Ta'zim!3b1!8m2!3d1.6005959!4d103.8286282!3m5!1s0x31da6914667487ff:0xacce71737f24d9f8!8m2!3d1.5985734!4d103.8257344!16s%2Fg%2F11jy8lc7p4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">🏫 Tabika Kemas</a></dt>
+            <dd>♠ Batu 13 1/2, Jalan Sungai Tiram, Kampung Ulu Tiram, 81800 Ulu Tiram, Johor</dd><br>
+
+            <dt><a href="https://www.google.com/maps/place/SK+Ulu+Tiram/@1.5996925,103.822202,19.75z/data=!4m6!3m5!1s0x31da68cd4247e1a1:0xe07f9087074d15bf!8m2!3d1.5997489!4d103.8228017!16s%2Fg%2F122zq9ny?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">🏫 Prasekolah di (SKUT)</a></dt>
+            <dd>♠ Sekolah Kebangsaan Ulu Tiram, 81800 Ulu Tiram, Johor</dd><br>
+
+            <dt><a href="#" target="_blank">🏫 Sekolah Rendah Kebangsaan Ulu Tiram (SKUT)</a></dt>
+            <dd>♠ UPSR : 2A 2B 2C</dd><br>
+
+            <dt><a href="#" target="_blank">🏫 Sekolah Agama Bandar Tiram (SABT)</a></dt>
+            <dd>♠ UPKK : 5A 2B 1C | SDEA : 2B 3C 3D 1E | SDKA : Pangkat 3</dd><br>
+
+            <dt><a href="#" target="_blank">🏫 SMK Desa Cemerlang (SMKDC)</a></dt>
+            <dd>♠ SPM : 3A- 2B+ 2B 1C+</dd><br>
+
+            <dt><a href="#" target="_blank">🏫 UiTM Johor Cawangan Segamat</a></dt>
+            <dd>♠ Diploma in Information Management</dd>
+        </dl>
+    </nav>
+
+    <section>
+        <h2 style="font-family:Monospace; font-size:30px; color:white; text-align:center; margin-bottom:30px;">
+            My Certificate: [Click to flip & check ↓↓]
+        </h2>
+        
+        <center>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Kecermelangan Kelas.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 1.html">Class Excellence Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Kursus Pengakap.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 2.html">Scout Courses Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Perkhemahan Pengakap.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 3.html">Scout Camping Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Setiausaha Pengakap.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 4.html">Scout Secretary Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Pengerusi PS.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 5.html">Library Club Chairman</a></div>
+                </div>
+            </div>
+
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Pengawas SPBT.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 6.html">Asst. Chief Textbook Prefect</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Pengurusan Solat.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 7.html">Prayer Management Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="UPKK.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 8.html">UPKK Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="SDEA.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 9.html">SDEA Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="SDKA.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 10.html">SDKA Certificate</a></div>
+                </div>
+            </div>
+
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Karnival PPIM.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 11.html">PPIM Carnival Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Pertandingan PPIM.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 12.html">PPIM Competition Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="Puteri Bongsu.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 13.html">Puteri Bongsu Certificate</a></div>
+                </div>
+            </div>
+            <div class="flip-box" style="width: 205px; height:285px;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="SPM.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 14.html">SPM Certificate</a></div>
+                </div>
+            </div>
+
+            <div class="flip-box" style="width: 605px; height:385px; display: block; margin: 30px auto;">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front"><img src="UPSR.jpg"></div>
+                    <div class="flip-box-back"><a href="Cer 15.html">UPSR Results Certificate</a></div>
+                </div>
+            </div>
+        </center>
+    </section>
+
+    <footer>
+        Copyright © NURAZLEEN <img src="moonflix me.png" width="30">
+    </footer>
+
+    <div class="nav-btns">
+        <a href="index.html" class="testbtn">Home</a>
+        <a href="Biodata.html" class="testbtn">Biodata</a>
+        <a href="Experience Internship.html" class="testbtn">Experience</a>
+        <a href="My Family.html" class="testbtn">Family</a>
+        <a href="Gallery.html" class="testbtn">Gallery</a>
+    </div>
+</div>
+
+<a href="#" id="backToTop" title="Go to top">🚀</a>
+
+<script>
+function updateDateTime() {
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+    const timeStr = now.toLocaleTimeString('en-GB', { hour12:false });
+    document.getElementById("datetime-simple").innerText = `📅 ${dateStr} | 🕑 ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>
